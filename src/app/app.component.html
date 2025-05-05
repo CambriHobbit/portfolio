@@ -1,14 +1,31 @@
 <header>
-  <h1>Gabin Mussio</h1>
-  <nav>
-    <ul>
-      <li><a routerLink="/">Acceuil</a></li>
-      <li><a routerLink="/projet">Projet</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
+  <nav class="navbar">
+    <a routerLink="/" class="logo">Mussio Gabin</a>
+    
+    <ul class="nav-links" [class.nav-active]="isNavOpen" [@navbarAnimation]="isNavOpen && isMobileView ? 'open' : 'closed'">
+      <li [@linkAnimation]="isNavOpen && isMobileView ? 'visible' : 'visible'">
+        <a routerLink="/home" routerLinkActive="active-link" (click)="closeNav('home')">Acceuil</a>
+      </li>
+      
+      <li [@linkAnimation]="isNavOpen && isMobileView ? 'visible' : 'visible'">
+        <a routerLink="/projets" routerLinkActive="active-link" (click)="closeNav('projets')">Projets</a>
+      </li>
+      
+      <li [@linkAnimation]="isNavOpen && isMobileView ? 'visible' : 'visible'">
+        <a routerLink="/contact" routerLinkActive="active-link" (click)="closeNav('contact')">Contact</a>
+      </li>
     </ul>
+    
+    <button class="burger" [class.toggle]="isNavOpen" (click)="toggleNav()">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </button>
   </nav>
 </header>
 
 <main>
-  <router-outlet></router-outlet>
+  <div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
 </main>
