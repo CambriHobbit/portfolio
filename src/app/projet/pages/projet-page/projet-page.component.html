@@ -1,1 +1,69 @@
-<p>projet-page works!</p>
+<div class="projet-page">
+  <div class="projects-container">
+    <div class="search-filter-container">
+      <form [formGroup]="searchForm" class="search-form">
+        <div class="search-bar">
+          <input
+            type="text"
+            formControlName="searchTerm"
+            placeholder="Rechercher..."
+            class="search-input"
+          />
+        </div>
+
+        <div class="filters">
+          <div class="filter-group technologies-filter">
+            <select formControlName="technologies">
+              <option value="" disabled>Filtrer par technologies</option>
+              @for (tech of allTechnologies; track $index) {
+              <option [value]="tech">
+                {{ tech }}
+              </option>
+              }
+            </select>
+          </div>
+
+          <button type="button" class="clear-btn" (click)="clearFilters()">
+            Réinitialiser
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="projects-list">
+      @for (projet of projects(); track $index) {
+      <div
+        class="project-card"
+        (click)="goToProject(projet.title)"
+        (keyup)="goToProject(projet.title)"
+      >
+        <img
+          [ngSrc]="'assets/imgs/' + projet.imageUrl"
+          [width]="200"
+          [height]="200"
+          [alt]="projet.title"
+          class="project-image"
+        />
+        <div>
+          <h3>{{ projet.title }}</h3>
+          <p>{{ projet.description }}</p>
+          <div class="technos">
+            @for (techno of projet.technologies; track $index) {
+            <div class="techno-item">
+              <img
+                [ngSrc]="'assets/icons/' + techno.logo"
+                [width]="32"
+                [height]="32"
+                [alt]="techno.name + ' logo'"
+                class="techno-logo"
+              />
+              <span class="icon-name">{{ techno.name }}</span>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

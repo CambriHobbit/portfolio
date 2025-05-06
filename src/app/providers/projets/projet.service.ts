@@ -11,11 +11,10 @@ export class ProjetService {
       title: 'Plateforme E-commerce',
       description:
         'Une plateforme e-commerce complète avec panier et paiement en ligne',
-      imageUrl: 'assets/projects/ecommerce.jpg',
+      imageUrl: 'placeholder.png',
       technologies: [
-        { logo: 'assets/logos/angular.png', name: 'Angular' },
-        { logo: 'assets/logos/nodejs.png', name: 'Node.js' },
-        { logo: 'assets/logos/mongodb.png', name: 'MongoDB' },
+        { logo: 'angular.svg', name: 'Angular' },
+        { logo: 'nodejs.png', name: 'Node.js' },
       ],
       liveUrl: 'https://ecommerce-example.com',
       sourceUrl: 'https://github.com/user/ecommerce',
@@ -25,10 +24,10 @@ export class ProjetService {
       id: 2,
       title: 'Application de gestion de tâches',
       description: 'Application permettant de gérer ses tâches quotidiennes',
-      imageUrl: 'assets/projects/taskmanager.jpg',
+      imageUrl: 'placeholder.png',
       technologies: [
-        { logo: 'assets/logos/angular.png', name: 'Angular' },
-        { logo: 'assets/logos/firebase.png', name: 'Firebase' },
+        { logo: 'angular.svg', name: 'Angular' },
+        { logo: 'nodejs.png', name: 'Node.js' },
       ],
       liveUrl: 'https://todo-app-example.com',
       sourceUrl: 'https://github.com/user/todo-app',
@@ -39,11 +38,10 @@ export class ProjetService {
       title: 'Dashboard Analytique',
       description:
         'Dashboard de visualisation de données avec graphiques interactifs',
-      imageUrl: 'assets/projects/analytics.jpg',
+      imageUrl: 'placeholder.png',
       technologies: [
-        { logo: 'assets/logos/angular.png', name: 'Angular' },
-        { logo: 'assets/logos/d3.png', name: 'D3.js' },
-        { logo: 'assets/logos/express.png', name: 'Express' },
+        { logo: 'angular.svg', name: 'Angular' },
+        { logo: 'nodejs.png', name: 'Node.js' },
       ],
       sourceUrl: 'https://github.com/user/analytics-dashboard',
       featured: true,
@@ -52,11 +50,10 @@ export class ProjetService {
       id: 4,
       title: 'Application de réservation',
       description: 'Système de réservation en ligne pour restaurants et cafés',
-      imageUrl: 'assets/projects/booking.jpg',
+      imageUrl: 'placeholder.png',
       technologies: [
-        { logo: 'assets/logos/angular.png', name: 'Angular' },
-        { logo: 'assets/logos/spring.png', name: 'Spring Boot' },
-        { logo: 'assets/logos/postgresql.png', name: 'PostgreSQL' },
+        { logo: 'angular.svg', name: 'Angular' },
+        { logo: 'nodejs.png', name: 'Node.js' },
       ],
       liveUrl: 'https://booking-example.com',
       featured: false,
@@ -66,10 +63,10 @@ export class ProjetService {
       title: 'Portfolio Interactif',
       description:
         'Portfolio professionnel avec animations et transitions fluides',
-      imageUrl: 'assets/projects/portfolio.jpg',
+      imageUrl: 'placeholder.png',
       technologies: [
-        { logo: 'assets/logos/angular.png', name: 'Angular' },
-        { logo: 'assets/logos/gsap.png', name: 'GSAP' },
+        { logo: 'angular.svg', name: 'Angular' },
+        { logo: 'nodejs.png', name: 'Node.js' },
       ],
       liveUrl: 'https://portfolio-example.com',
       sourceUrl: 'https://github.com/user/portfolio',
@@ -77,13 +74,47 @@ export class ProjetService {
     },
   ]);
 
+  private readonly allProjects: WritableSignal<Project[]> = signal([...this.projects()]);
+
   constructor() {}
 
   getProjects(): Signal<Project[]> {
-    return this.projects.asReadonly();
+    return this.allProjects.asReadonly();
   }
 
-  getProjectById(id: number): Project | undefined {
-    return this.projects().find((p) => p.id === id);
+  getAllTech(): string[] {
+    let allTech: Set<string> = new Set();
+    this.projects().forEach((project: Project) => {
+      project.technologies.forEach((tech) => {
+        allTech.add(tech.name);
+      });
+    });
+    return Array.from(allTech);
+  }
+
+  searchProject(projectName: string): void {
+    console.log('Searching for project:', projectName);
+
+    this.allProjects.set(
+      this.projects().filter((proj: Project) => {
+        const res = proj.title
+          .toLowerCase()
+          .includes(projectName.toLowerCase());
+        if (res) return true;
+        else return false;
+      })
+    );
+  }
+
+  filterByTech(technologies: string): void {
+    console.log('Filtering by technology:', technologies);
+
+    this.allProjects.update((prevProjects) =>
+      prevProjects.filter((proj: Project) =>
+        proj.technologies.some((tech) =>
+          tech.name.toLowerCase().includes(technologies.toLowerCase())
+        )
+      )
+    );
   }
 }
