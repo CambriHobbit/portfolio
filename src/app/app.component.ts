@@ -95,8 +95,6 @@ export class AppComponent {
   }
 
   closeNav(path: string): void {
-    console.log('Navigating to:', path);
-
     this.router.navigate([path]);
 
     this.isNavOpen = false;

@@ -93,8 +93,6 @@ export class ProjetService {
   }
 
   searchProject(projectName: string): void {
-    console.log('Searching for project:', projectName);
-
     this.allProjects.set(
       this.projects().filter((proj: Project) => {
         const res = proj.title
@@ -107,8 +105,6 @@ export class ProjetService {
   }
 
   filterByTech(technologies: string): void {
-    console.log('Filtering by technology:', technologies);
-
     this.allProjects.update((prevProjects) =>
       prevProjects.filter((proj: Project) =>
         proj.technologies.some((tech) =>
@@ -117,4 +113,9 @@ export class ProjetService {
       )
     );
   }
+
+  getProjectById(id: string): Project | undefined {
+    return this.projects().find((proj) => proj.title === id);
+  }
+
 }

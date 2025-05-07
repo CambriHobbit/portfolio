@@ -1,9 +1,10 @@
-import { Component, DestroyRef, inject, Signal } from '@angular/core';
+import { Component, computed, DestroyRef, inject, Signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import Project from '../../../models/projet.model';
 import { ProjetService } from '../../../providers/projets/projet.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NgOptimizedImage } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projet-page',
@@ -24,6 +25,7 @@ export class ProjetPageComponent {
   // Providers
   private readonly projectService: ProjetService = inject(ProjetService);
   private readonly destroyRef: DestroyRef = inject(DestroyRef);
+  private readonly router: Router = inject(Router);
 
   constructor() {
     this.projects = this.projectService.getProjects();
@@ -48,6 +50,11 @@ export class ProjetPageComponent {
   }
 
   goToProject(path: string): void {
-    console.log('Navigating to project:', path);
+    this.router.navigate(['/projets/', path]);
+  }
+
+
+  transformDescription(description: string): string {
+    return description;
   }
 }

@@ -1,0 +1,29 @@
+<div class="details-projet">
+  <h1>{{ project?.title }}</h1>
+  <div class="project-details">
+    <img
+      [ngSrc]="'assets/imgs/' + project?.imageUrl"
+      [width]="300"
+      [height]="300"
+      [alt]="project?.title"
+      class="project-image"
+    />
+    <div class="project-description">
+      <p>{{ project?.description }}</p>
+      <div class="technos">
+        @for (techno of project?.technologies; track $index) {
+        <div class="techno-item">
+          <img
+            [ngSrc]="'assets/icons/' + techno.logo"
+            [width]="32"
+            [height]="32"
+            [alt]="techno.name + ' logo'"
+            class="techno-logo"
+          />
+          <span class="icon-name">{{ techno.name }}</span>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

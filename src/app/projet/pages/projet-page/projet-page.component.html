@@ -46,7 +46,7 @@
         />
         <div>
           <h3>{{ projet.title }}</h3>
-          <p>{{ projet.description }}</p>
+          <p>{{ transformDescription(projet.description) }}</p>
           <div class="technos">
             @for (techno of projet.technologies; track $index) {
             <div class="techno-item">

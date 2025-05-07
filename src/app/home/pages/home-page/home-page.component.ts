@@ -167,18 +167,11 @@ export class HomePageComponent {
 
   private readonly router: Router = inject(Router);
 
-  constructor() {}
-
-  ngOnInit(): void {
-    console.log('Component initialized');
-  }
-
   goToProject(path: string): void {
-    console.log('Navigating to project:', path);
+    this.router.navigate(['/projets/', path]);
   }
 
   goToProjects(): void {
-    console.log('Navigating to projects');
-    this.router.navigate(['/projects']);
+    this.router.navigate(['/projets']);
   }
 }
