@@ -87,10 +87,6 @@
   }
 }
 
-.project-links a:hover {
-  background-color: #4ecca3; /* Vert menthe */
-}
-
 .project-meta {
   font-size: 0.9rem;
   color: var(--primary);

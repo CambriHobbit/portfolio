@@ -1,4 +1,4 @@
-import { Component, computed, DestroyRef, inject, Signal } from '@angular/core';
+import { Component,  DestroyRef, inject, Signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import Project from '../../../models/projet.model';
 import { ProjetService } from '../../../providers/projets/projet.service';
