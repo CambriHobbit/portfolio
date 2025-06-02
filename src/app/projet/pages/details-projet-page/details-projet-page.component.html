@@ -1,29 +1,70 @@
-<div class="details-projet">
-  <h1>{{ project?.title }}</h1>
-  <div class="project-details">
+<div class="details-projet-page">
+  <div class="project-header">
     <img
-      [ngSrc]="'assets/imgs/' + project?.imageUrl"
-      [width]="300"
-      [height]="300"
+      [src]="'assets/imgs/' + project?.imageUrl"
       [alt]="project?.title"
+      [width]="150"
+      [height]="150"
       class="project-image"
     />
-    <div class="project-description">
-      <p>{{ project?.description }}</p>
-      <div class="technos">
-        @for (techno of project?.technologies; track $index) {
-        <div class="techno-item">
-          <img
-            [ngSrc]="'assets/icons/' + techno.logo"
-            [width]="32"
-            [height]="32"
-            [alt]="techno.name + ' logo'"
-            class="techno-logo"
-          />
-          <span class="icon-name">{{ techno.name }}</span>
+
+    <div class="project-info">
+      <h2 class="project-title">{{ project?.title }}</h2>
+      <div class="project-meta">
+        {{ project?.date }} – {{ project?.company }}
+      </div>
+
+      <div>
+        <p class="project-description">
+          {{ project?.description }}
+        </p>
+      </div>
+
+      <div>
+        <h4>Technologies utilisées :</h4>
+        <div class="technos">
+          @for (techno of project?.technologies; track $index) {
+          <div class="techno-item">
+            <img
+              [ngSrc]="'assets/icons/' + techno.logo"
+              [width]="32"
+              [height]="32"
+              [alt]="techno.name + ' logo'"
+              class="techno-logo"
+            />
+            <span class="icon-name">{{ techno.name }}</span>
+          </div>
+          }
         </div>
-        }
       </div>
     </div>
+  </div>
+
+  <div>
+    <h4>Compétences techniques :</h4>
+    <div class="competences">
+      @for (comp of project?.competencesTechniques; track $index) {
+      <span class="competence">
+        {{ comp }}
+      </span>
+      }
+    </div>
+
+    <h4>Compétences transverses :</h4>
+    <div class="competences">
+      @for (comp of project?.competencesTransverses; track $index) {
+      <span class="competence">
+        {{ comp }}
+      </span>
+      }
+    </div>
+  </div>
+
+  <div class="project-links">
+    @if (project?.liveUrl) {
+    <a [href]="project?.liveUrl">Voir en ligne</a>
+    } @if (project?.sourceUrl) {
+    <a [href]="project?.sourceUrl">Code source</a>
+    }
   </div>
 </div>

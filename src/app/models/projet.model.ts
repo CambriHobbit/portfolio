@@ -7,4 +7,8 @@ export default interface Project {
   liveUrl?: string;
   sourceUrl?: string;
   featured: boolean;
+  competencesTechniques: string[];
+  competencesTransverses: string[];
+  date: string;
+  company: string;
 }

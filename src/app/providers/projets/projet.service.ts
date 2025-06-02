@@ -19,6 +19,19 @@ export class ProjetService {
       liveUrl: 'https://ecommerce-example.com',
       sourceUrl: 'https://github.com/user/ecommerce',
       featured: true,
+      competencesTechniques: [
+        'Développement Frontend',
+        'Intégration API',
+        'Gestion de l’état',
+      ],
+      competencesTransverses: [
+        'Gestion de projet',
+        'Communication',
+        'Résolution de problèmes',
+      ],
+      date: '2023-01-15',
+      company: 'Tech Solutions',
+    
     },
     {
       id: 2,
@@ -32,6 +45,18 @@ export class ProjetService {
       liveUrl: 'https://todo-app-example.com',
       sourceUrl: 'https://github.com/user/todo-app',
       featured: false,
+      competencesTechniques: [
+        'Développement Frontend',
+        'Gestion de l’état',
+        'Intégration API',
+      ],
+      competencesTransverses: [
+        'Gestion du temps',
+        'Organisation',
+        'Collaboration',
+      ],
+      date: '2023-02-20',
+      company: 'Dev Innovations',
     },
     {
       id: 3,
@@ -45,21 +70,22 @@ export class ProjetService {
       ],
       sourceUrl: 'https://github.com/user/analytics-dashboard',
       featured: true,
+      competencesTechniques: [
+        'Visualisation de données',
+        'Intégration API',
+        'Développement Frontend',
+      ],
+      competencesTransverses: [
+        'Analyse de données',
+        'Résolution de problèmes',
+        'Communication',
+      ],
+      date: '2023-03-10',
+      company: 'Data Insights',
     },
+
     {
       id: 4,
-      title: 'Application de réservation',
-      description: 'Système de réservation en ligne pour restaurants et cafés',
-      imageUrl: 'placeholder.png',
-      technologies: [
-        { logo: 'angular.svg', name: 'Angular' },
-        { logo: 'nodejs.png', name: 'Node.js' },
-      ],
-      liveUrl: 'https://booking-example.com',
-      featured: false,
-    },
-    {
-      id: 5,
       title: 'Portfolio Interactif',
       description:
         'Portfolio professionnel avec animations et transitions fluides',
@@ -71,6 +97,18 @@ export class ProjetService {
       liveUrl: 'https://portfolio-example.com',
       sourceUrl: 'https://github.com/user/portfolio',
       featured: true,
+      competencesTechniques: [
+        'Développement Frontend',
+        'Animations CSS',
+        'Intégration API',
+      ],
+      competencesTransverses: [
+        'Créativité',
+        'Gestion de projet',
+        'Communication',
+      ],
+      date: '2023-04-05',
+      company: 'Creative Agency',
     },
   ]);
 
@@ -116,6 +154,10 @@ export class ProjetService {
 
   getProjectById(id: string): Project | undefined {
     return this.projects().find((proj) => proj.title === id);
+  }
+
+  getProjectsSlice(end: number): Project[] {
+    return this.projects().slice(0, end);
   }
 
 }

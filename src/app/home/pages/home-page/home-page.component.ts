@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import Project from '../../../models/projet.model';
 import { Router } from '@angular/router';
+import { ProjetService } from '../../../providers/projets/projet.service';
 
 @Component({
   selector: 'app-home-page',
@@ -71,50 +72,7 @@ export class HomePageComponent {
     },
   ];
 
-  projects: Project[] = [
-    {
-      id: 1,
-      title: 'E-commerce Platform',
-      description:
-        "Une plateforme e-commerce responsive avec panier d'achat, paiement sécurisé et système de gestion de contenu pour les administrateurs.",
-      imageUrl: 'placeholder.png',
-      technologies: [
-        { name: 'Angular', logo: 'angular.svg' },
-        { name: 'Node.js', logo: 'nodejs.png' },
-      ],
-      liveUrl: 'https://example-ecommerce.com',
-      sourceUrl: 'https://github.com/username/ecommerce-platform',
-      featured: true,
-    },
-    {
-      id: 2,
-      title: 'Application de Gestion de Tâches',
-      description:
-        'Une application web pour organiser et suivre des tâches avec fonctionnalités de drag-and-drop, notifications et filtres avancés.',
-      imageUrl: 'placeholder.png',
-      technologies: [
-        { name: 'Angular', logo: 'angular.svg' },
-        { name: 'Node.js', logo: 'nodejs.png' },
-      ],
-      liveUrl: 'https://task-manager-app.com',
-      sourceUrl: 'https://github.com/username/task-manager',
-      featured: false,
-    },
-    {
-      id: 3,
-      title: 'Portfolio Interactif',
-      description:
-        "Site portfolio avec animations fluides, transitions de page et design adaptatif pour toutes tailles d'écran.",
-      imageUrl: 'placeholder.png',
-      technologies: [
-        { name: 'Angular', logo: 'angular.svg' },
-        { name: 'Node.js', logo: 'nodejs.png' },
-      ],
-      liveUrl: 'https://my-portfolio.com',
-      sourceUrl: 'https://github.com/username/interactive-portfolio',
-      featured: true,
-    },
-  ];
+  projects: Project[];
 
   formations = [
     {
@@ -166,6 +124,7 @@ export class HomePageComponent {
   ];
 
   private readonly router: Router = inject(Router);
+  private readonly projectService = inject(ProjetService);
 
   goToProject(path: string): void {
     this.router.navigate(['/projets/', path]);
@@ -173,5 +132,9 @@ export class HomePageComponent {
 
   goToProjects(): void {
     this.router.navigate(['/projets']);
+  }
+
+  constructor() {
+    this.projects = this.projectService.getProjectsSlice(3);
   }
 }

@@ -1,28 +1,105 @@
-.details-projet {
-    padding: 24px;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
+.project-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-.project-details {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5vw;
+.project-image {
+  width: fit-content;
+  border-radius: 3px;
+  flex-shrink: 0;
 }
 
-.technos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
+.project-title {
+  font-size: 1.8rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+}
+
+.featured-badge {
+  background-color: #ff7e5f; /* Orange doux */
+  color: #1a2238;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+}
+
+.project-description {
+  margin: 1rem 0;
+  color: var(--primary); /* Gris clair */
+}
+
+.technologies,
+.competences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.tech,
+.competence {
+  color: var(--text);
+  background-color: #1a2238; /* Bleu marine profond */
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.tech img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+.project-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  text-decoration: none;
+  background-color: #3498db; /* Bleu ciel */
+  color: #f8f8f8;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.project-links a:hover {
+  background-color: #4ecca3; /* Vert menthe */
+}
+
+.project-meta {
+  font-size: 0.9rem;
+  color: var(--primary);
+  margin-top: 0.5rem;
+}
+
+.details-projet-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 32px;
 }
 
 .techno-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.technos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 12px;
 }

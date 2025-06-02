@@ -14,3 +14,7 @@ html, body {
     --accent: #3498DB;
     --border: #DDDDDD;
 }
+
+a, button {
+    cursor: pointer;
+}

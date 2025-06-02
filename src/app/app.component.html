@@ -10,10 +10,6 @@
       <li [@linkAnimation]="isNavOpen && isMobileView ? 'visible' : 'visible'">
         <a routerLink="/projets" routerLinkActive="active-link" (click)="closeNav('projets')">Projets</a>
       </li>
-      
-      <li [@linkAnimation]="isNavOpen && isMobileView ? 'visible' : 'visible'">
-        <a routerLink="/contact" routerLinkActive="active-link" (click)="closeNav('contact')">Contact</a>
-      </li>
     </ul>
     
     <button class="burger" [class.toggle]="isNavOpen" (click)="toggleNav()">
