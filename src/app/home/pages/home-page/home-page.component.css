@@ -249,6 +249,28 @@
   }
 }
 
+.link {
+  width: fit-content;
+  text-decoration: none;
+  background-color: #333745;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #f8f8f8;
+  border: 1px solid #dddddd;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background-color: #4ecca3;
+    color: #1a2238;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(78, 204, 163, 0.2);
+  }
+}
+
 .competences-section {
   display: flex;
   flex-direction: row;
@@ -371,7 +393,6 @@
 }
 
 @media screen and (max-width: 500px) {
-
   .diploma-dot {
     visibility: hidden;
   }
@@ -392,7 +413,6 @@
     margin-bottom: 12px;
   }
 }
-
 
 .experience-section {
   color: var(--primary);

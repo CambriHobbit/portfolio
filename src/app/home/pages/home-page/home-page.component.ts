@@ -16,6 +16,7 @@ export class HomePageComponent {
   public description: string =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum felis est, quis rutrum diam porttitor id. In nisi magna, varius ac varius et, ornare id dui. Ut pulvinar pellentesque magna, eget faucibus turpis imperdiet vulputate. Sed ac tristique est, sed eleifend mi. In commodo velit leo, suscipit imperdiet sem pretium ac. Phasellus pharetra odio id accumsan tempor. Donec convallis faucibus accumsan. Proin eget vulputate urna. Morbi lectus metus, dignissim eu accumsan quis, vehicula ut erat. Nam ut iaculis urna.';
 
+  public linkLinkedIn: string = 'https://www.linkedin.com/in/gabin-mussio-2b652b369/';  
   public competences: Array<{
     categorie: string;
     liste: Array<{ nom: string; logo: string }>;

@@ -7,7 +7,6 @@
 
 .search-filter-container {
   background-color: #FFF;
-  border-bottom: 1px solid var(--border);
   padding: 1rem 0;
   margin-bottom: 1.5rem;
 }
