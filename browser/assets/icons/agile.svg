@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond de l'icône -->
+  <circle cx="100" cy="100" r="98" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Cercle principal -->
+  <circle cx="100" cy="100" r="80" fill="#ffffff" stroke="#3498db" stroke-width="3"/>
+  
+  <!-- Flèches circulaires - représentant le cycle agile -->
+  <path d="M100,20 A80,80 0 0,1 180,100" stroke="#2ecc71" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M180,100 A80,80 0 0,1 100,180" stroke="#e74c3c" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M100,180 A80,80 0 0,1 20,100" stroke="#f39c12" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M20,100 A80,80 0 0,1 100,20" stroke="#9b59b6" stroke-width="6" fill="none" stroke-linecap="round"/>
+  
+  <!-- Pointes de flèches -->
+  <polygon points="100,20 108,30 92,30" fill="#2ecc71"/>
+  <polygon points="180,100 170,108 170,92" fill="#e74c3c"/>
+  <polygon points="100,180 92,170 108,170" fill="#f39c12"/>
+  <polygon points="20,100 30,92 30,108" fill="#9b59b6"/>
+  
+  <!-- Centre avec le A d'Agile -->
+  <circle cx="100" cy="100" r="35" fill="#ffffff" stroke="#2c3e50" stroke-width="2.5"/>
+  <text x="100" y="118" font-family="Arial, sans-serif" font-size="50" font-weight="bold" text-anchor="middle" fill="#2c3e50">A</text>
+  
+  <!-- 4 petits cercles représentant les valeurs agiles -->
+  <circle cx="140" cy="60" r="12" fill="#3498db"/>
+  <circle cx="140" cy="140" r="12" fill="#e74c3c"/>
+  <circle cx="60" cy="140" r="12" fill="#f39c12"/>
+  <circle cx="60" cy="60" r="12" fill="#9b59b6"/>
+  
+  <!-- Lignes connectant les cercles au centre -->
+  <line x1="115" y1="85" x2="132" y2="68" stroke="#3498db" stroke-width="2"/>
+  <line x1="115" y1="115" x2="132" y2="132" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="85" y1="115" x2="68" y2="132" stroke="#f39c12" stroke-width="2"/>
+  <line x1="85" y1="85" x2="68" y2="68" stroke="#9b59b6" stroke-width="2"/>
+</svg>
