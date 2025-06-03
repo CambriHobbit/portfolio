@@ -8,7 +8,7 @@ export class ProjetService {
   private readonly projects: WritableSignal<Project[]> = signal([
     {
       id: 4,
-      title: 'Alterance: Modernisation et uniformisation des applications internes',
+      title: 'Alternance: Modernisation et uniformisation des applications internes',
       description:
         'Migration des différrentes applications internes en utilisant les outils GEODIS. Le but est de remplacer le framework Bootstrap par un librairie GEODIS.',
       imageUrl: 'geodis.png',

@@ -18,3 +18,7 @@ html, body {
 a, button {
     cursor: pointer;
 }
+
+main, body {
+    overflow-x: hidden;
+}

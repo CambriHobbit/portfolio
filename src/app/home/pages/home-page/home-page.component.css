@@ -1,6 +1,6 @@
 .home-container {
   margin: 0;
-  padding: 5vw;
+  padding: 24px;
   font-family: "Roboto", Arial, sans-serif;
   background-color: #f8f8f8;
   color: #1a2238;
@@ -426,14 +426,18 @@
     margin-bottom: 2rem;
     border-radius: 5px;
 
+    width: fit-content;
+
     .job-header {
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
+      width: fit-content;
 
       h3 {
         font-size: 1.5rem;
         margin: 0;
+        width: fit-content;
       }
 
       .company {
@@ -445,13 +449,16 @@
     .job-details {
       list-style-type: disc;
       margin-bottom: 1rem;
+      width: fit-content;
 
       li {
         margin-bottom: 0.5rem;
+        width: fit-content;
       }
     }
 
     .skills {
+      width: fit-content;
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -465,4 +472,11 @@
       }
     }
   }
+}
+
+.experience {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
 }

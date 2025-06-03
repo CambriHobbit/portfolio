@@ -68,25 +68,26 @@
     <section class="experience-section">
       <h2 class="section-title">Expérience Professionnelle</h2>
     
-      @for (job of experiences; track $index) {
-        <div class="experience-card">
-        <div class="job-header">
-          <h3>{{ job.title }}</h3>
-          <span class="company">{{ job.company }} — {{ job.period }}</span>
-        </div>
-        <ul class="job-details">
-          @for (detail of job.tasks; track $index) {
-            <li>{{ detail }}</li>
-          }
-        </ul>
-        <div class="skills">
-          @for (skill of job.skills; track $index) {
-            <span  class="skill-tag">{{ skill }}</span>
-          }
-        </div>
+      <div class="experience">
+        @for (job of experiences; track $index) {
+          <div class="experience-card">
+            <div class="job-header">
+              <h3>{{ job.title }}</h3>
+              <span class="company">{{ job.company }} — {{ job.period }}</span>
+            </div>
+            <ul class="job-details">
+              @for (detail of job.tasks; track $index) {
+                <li>{{ detail }}</li>
+              }
+            </ul>
+            <div class="skills">
+              @for (skill of job.skills; track $index) {
+                <span  class="skill-tag">{{ skill }}</span>
+              }
+            </div>
+          </div>
+        }
       </div>
-      }
-  
     </section>
 
     <section class="education-section">
