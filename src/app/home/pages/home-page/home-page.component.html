@@ -13,7 +13,6 @@
 
     <div class="info-container">
       <h1 class="name">{{ nom }}</h1>
-      <h2 class="title">{{ titre }}</h2>
 
       <div class="description">
         <p>{{ description }}</p>
@@ -23,10 +22,8 @@
     </div>
   </div>
 
-  <hr class="border" />
-
   <div class="projects-section">
-    <h2 class="title">Mes projets</h2>
+    <h2 class="section-title">Mes projets</h2>
 
     @for (projet of projects; track $index) {
     <div class="project-card">

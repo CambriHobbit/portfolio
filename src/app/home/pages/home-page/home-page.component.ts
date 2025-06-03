@@ -11,12 +11,12 @@ import { ProjetService } from '../../../providers/projets/projet.service';
   styleUrl: './home-page.component.css',
 })
 export class HomePageComponent {
-  public nom: string = 'Votre Nom';
-  public titre: string = 'Développeur Web';
+  public nom: string = 'Mussio Gabin';
   public description: string =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum felis est, quis rutrum diam porttitor id. In nisi magna, varius ac varius et, ornare id dui. Ut pulvinar pellentesque magna, eget faucibus turpis imperdiet vulputate. Sed ac tristique est, sed eleifend mi. In commodo velit leo, suscipit imperdiet sem pretium ac. Phasellus pharetra odio id accumsan tempor. Donec convallis faucibus accumsan. Proin eget vulputate urna. Morbi lectus metus, dignissim eu accumsan quis, vehicula ut erat. Nam ut iaculis urna.';
+    "Je suis étudiant en BUT Informatique à l'IUT2 de Grenoble, passionné par le développement web et les technologies modernes. Je suis à la recherche de défis et d'opportunités pour apprendre et developper mes compétences dans le domaine de l'informatique.";
 
-  public linkLinkedIn: string = 'https://www.linkedin.com/in/gabin-mussio-2b652b369/';  
+  public linkLinkedIn: string =
+    'https://www.linkedin.com/in/gabin-mussio-2b652b369/';
   public competences: Array<{
     categorie: string;
     liste: Array<{ nom: string; logo: string }>;
@@ -77,50 +77,41 @@ export class HomePageComponent {
 
   formations = [
     {
-      ecole: 'UNIVERSITÉ DE TECHNOLOGIES',
-      lieu: 'Lyon',
-      annee: '2018',
-      diplome: 'Licence Informatique',
+      ecole: 'UGA - IUT2',
+      lieu: 'Grenoble - 38000',
+      annee: '2022-2025',
+      diplome: 'BUT Informatique',
       details: [
-        'Spécialisation en programmation orientée objet',
-        'Formation en bases de données et architecture logicielle',
-        "Projet étudiant: Développement d'une application mobile",
+        "Réalisation d'applications : conception, développement,validation",
       ],
     },
     {
-      ecole: 'LYCÉE TECHNIQUE',
-      lieu: 'Marseille',
-      annee: '2015',
-      diplome: 'Baccalauréat STI2D',
+      ecole: 'Lycée du Granier',
+      lieu: 'La Ravoire - 73490',
+      annee: '2019-2022',
+      diplome: 'Baccalauréat général',
       details: [
-        "Spécialisation en systèmes d'information et numérique",
-        'Formation en mathématiques et informatique',
+        'Mathématiques',
+        'Numérique et Sciences Informatiques (NSI)',
+        'Physique-Chimie',
       ],
     },
   ];
 
   experiences = [
     {
-      title: 'Développeur Front-End',
-      company: 'Agence WebNova',
-      period: 'Janv 2023 - Présent',
-      tasks: [
-        'Développement d’interfaces réactives avec Angular',
-        'Intégration de maquettes Figma responsives',
-        'Optimisation des performances et accessibilité',
-      ],
-      skills: ['Angular', 'SCSS', 'RxJS', 'TypeScript'],
+      title: 'Alternant - Développeur Front-End',
+      company: 'GEODIS',
+      period: 'Août 2024 - Août 2025',
+      tasks: ['Modernisation et uniformisation des applicationss internes'],
+      skills: ['Angular', 'HTML', 'SCSS', 'TypeScript', 'Node.js'],
     },
     {
-      title: 'Développeur Web Full-Stack',
-      company: 'Startup DevBoost',
-      period: 'Juin 2021 - Déc 2022',
-      tasks: [
-        'Conception d’API REST avec Node.js',
-        'Déploiement via Docker et CI/CD',
-        'Création de dashboards d’administration Angular',
-      ],
-      skills: ['Node.js', 'Express', 'Angular', 'Docker'],
+      title: 'Stage - Développeur Front-End',
+      company: 'GEODIS',
+      period: 'Avril 2024 - Juin 2024',
+      tasks: ["Modernisation d'une application interne"],
+      skills: ['Angular', 'HTML', 'SCSS', 'TypeScript', 'Node.js'],
     },
   ];
 

@@ -7,108 +7,106 @@ import Project from '../../models/projet.model';
 export class ProjetService {
   private readonly projects: WritableSignal<Project[]> = signal([
     {
-      id: 1,
-      title: 'Plateforme E-commerce',
+      id: 4,
+      title: 'Alterance: Modernisation et uniformisation des applications internes',
       description:
-        'Une plateforme e-commerce complète avec panier et paiement en ligne',
-      imageUrl: 'placeholder.png',
+        'Migration des différrentes applications internes en utilisant les outils GEODIS. Le but est de remplacer le framework Bootstrap par un librairie GEODIS.',
+      imageUrl: 'geodis.png',
       technologies: [
         { logo: 'angular.svg', name: 'Angular' },
+        { logo: 'typescript.png', name: 'TypeScript' },
+        { logo: 'html-5.png', name: 'HTML' },
+        { logo: 'css-3.png', name: 'CSS' },
         { logo: 'nodejs.png', name: 'Node.js' },
       ],
-      liveUrl: 'https://ecommerce-example.com',
-      sourceUrl: 'https://github.com/user/ecommerce',
-      featured: true,
+      featured: false,
       competencesTechniques: [
-        'Développement Frontend',
-        'Intégration API',
-        'Gestion de l’état',
+        'Développement d\'IHM',
+        'Tests unitaires',
+        'Tests d\'intégrations'
       ],
       competencesTransverses: [
-        'Gestion de projet',
+        'Organisation',
+        'Autonomie',
         'Communication',
-        'Résolution de problèmes',
       ],
-      date: '2023-01-15',
-      company: 'Tech Solutions',
-    
+      date: 'Août 2024 - Août 2025',
+      company: 'GEODIS ERN',
+    },
+    {
+      id: 3,
+      title: 'Stage : Modernisation d\'une application ',
+      description:
+        'Refonte d\'une application de contenant des informations pour les développeur de GEODIS ASSC. Le but de ce projet est de moderniser l\'application en utilisant Angular et Node.js pour améliorer l\'expérience utilisateur et la performance.',
+      imageUrl: 'geodis.png',
+      technologies: [
+        { logo: 'angular.svg', name: 'Angular' },
+        { logo: 'typescript.png', name: 'TypeScript' },
+        { logo: 'html-5.png', name: 'HTML' },
+        { logo: 'css-3.png', name: 'CSS' },
+        { logo: 'nodejs.png', name: 'Node.js' },
+      ],
+      featured: false,
+      competencesTechniques: [
+        'Création d\'application Angular',
+        'Conception d\'IHM',
+        'Patron de conception Smart-Dumb',
+      ],
+      competencesTransverses: [
+        'Organisation',
+        'Résolution de problèmes'
+      ],
+      date: 'Avril 2024 - Juin 2024',
+      company: 'GEODIS ERN',
     },
     {
       id: 2,
-      title: 'Application de gestion de tâches',
-      description: 'Application permettant de gérer ses tâches quotidiennes',
-      imageUrl: 'placeholder.png',
+      title: 'Game Jam',
+      description: 'Création d’un jeu vidéo en 7 jours. Le thème était "Les nations s\'affrontent passifiquement". Les contraintes étaient d\'utiliser Python et Pygame pour faire un jeu en réseaux. Nous avons décider de faire un jeu de combat sur plateforme.',
+      imageUrl: 'gamejam.png',
       technologies: [
-        { logo: 'angular.svg', name: 'Angular' },
-        { logo: 'nodejs.png', name: 'Node.js' },
+        { logo: 'python.png', name: 'Python' },
       ],
-      liveUrl: 'https://todo-app-example.com',
-      sourceUrl: 'https://github.com/user/todo-app',
       featured: false,
       competencesTechniques: [
-        'Développement Frontend',
-        'Gestion de l’état',
-        'Intégration API',
+        'Développement d\'un client',
+        'Développement d\'un serveur',
+        'Programmation réseau'
       ],
       competencesTransverses: [
         'Gestion du temps',
         'Organisation',
         'Collaboration',
-      ],
-      date: '2023-02-20',
-      company: 'Dev Innovations',
-    },
-    {
-      id: 3,
-      title: 'Dashboard Analytique',
-      description:
-        'Dashboard de visualisation de données avec graphiques interactifs',
-      imageUrl: 'placeholder.png',
-      technologies: [
-        { logo: 'angular.svg', name: 'Angular' },
-        { logo: 'nodejs.png', name: 'Node.js' },
-      ],
-      sourceUrl: 'https://github.com/user/analytics-dashboard',
-      featured: true,
-      competencesTechniques: [
-        'Visualisation de données',
-        'Intégration API',
-        'Développement Frontend',
-      ],
-      competencesTransverses: [
-        'Analyse de données',
-        'Résolution de problèmes',
-        'Communication',
-      ],
-      date: '2023-03-10',
-      company: 'Data Insights',
-    },
-
-    {
-      id: 4,
-      title: 'Portfolio Interactif',
-      description:
-        'Portfolio professionnel avec animations et transitions fluides',
-      imageUrl: 'placeholder.png',
-      technologies: [
-        { logo: 'angular.svg', name: 'Angular' },
-        { logo: 'nodejs.png', name: 'Node.js' },
-      ],
-      liveUrl: 'https://portfolio-example.com',
-      sourceUrl: 'https://github.com/user/portfolio',
-      featured: true,
-      competencesTechniques: [
-        'Développement Frontend',
-        'Animations CSS',
-        'Intégration API',
-      ],
-      competencesTransverses: [
         'Créativité',
+      ],
+      date: 'Septembre 2024',
+      company: 'IUT2 Grenoble',
+      sourceUrl: 'https://github.com/ockapy/Game-Jam2'
+    },
+    {
+      id: 1,
+      title: 'Pokédex',
+      description:
+        'Le but de ce projet est de se familiariser avec les appels API en JavaScript et une pages web avec les données récupérers. Pour ce projet universitaire en binôme, nous avons choisi de créer un Pokédex en utilisant l’API PokéAPI.',
+      imageUrl: 'pokedex.png',
+      technologies: [
+        { logo: 'javascript.svg', name: 'JavaScript' },
+        { logo: 'html-5.png', name: 'HTML' },
+        { logo: 'css-3.png', name: 'CSS' },
+      ],
+      liveUrl: 'https://clooooud.github.io/pokedex/',
+      sourceUrl: 'https://github.com/Clooooud/pokedex',
+      featured: true,
+      competencesTechniques: [
+        'Intégration API',
+      ],
+      competencesTransverses: [
         'Gestion de projet',
         'Communication',
+        'Résolution de problèmes',
       ],
-      date: '2023-04-05',
-      company: 'Creative Agency',
+      date: 'Janvier 2023',
+      company: 'IUT2 Grenoble',
     },
   ]);
 

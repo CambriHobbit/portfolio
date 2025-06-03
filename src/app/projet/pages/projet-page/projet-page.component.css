@@ -148,3 +148,7 @@ option {
   background-color: #333745; /* fond des options */
   color: #F8F8F8;
 }
+
+.project-image {
+  border-radius: 16px;
+}
