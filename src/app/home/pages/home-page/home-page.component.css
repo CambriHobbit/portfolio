@@ -1,9 +1,14 @@
 .home-container {
-  margin: 0;
+  margin: 0 10vw;
   padding: 24px;
   font-family: "Roboto", Arial, sans-serif;
-  background-color: #f8f8f8;
   color: #1a2238;
+}
+
+@media (max-width: 1000px) {
+  .home-container {
+    margin: 0;
+  }
 }
 
 .profile-section {
@@ -90,6 +95,7 @@
   margin: 0;
 
   li {
+    cursor: default;
     background-color: #333745;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -100,13 +106,6 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-
-    &:hover {
-      background-color: #4ecca3;
-      color: #1a2238;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(78, 204, 163, 0.2);
-    }
   }
 }
 
@@ -194,21 +193,20 @@
 }
 
 .project-link {
-  background-color: #4ecca3;
-  color: #1a2238;
-
+  width: fit-content;
+  background-color: #333745;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-size: 0.9rem;
+  color: #f8f8f8;
   border: 1px solid #dddddd;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: fit-content;
 
   &:hover {
-    background-color: darken(#4ecca3, 10%);
+    background-color: #4ecca3;
     color: #1a2238;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(78, 204, 163, 0.2);

@@ -1,8 +1,14 @@
 .project-header {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1.5rem;
   align-items: center;
+}
+
+@media (max-width: 650px) {
+  .project-header {
+    flex-wrap: wrap;
+  }
 }
 
 .project-image {
@@ -102,6 +108,13 @@
   flex-direction: column;
   justify-content: center;
   padding: 24px 32px;
+  margin: 0 10vw;
+}
+
+@media (max-width: 900px) {
+  .details-projet-page {
+    margin: 0;
+  }
 }
 
 .techno-item {
