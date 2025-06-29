@@ -10,7 +10,7 @@ export class ProjetService {
       id: 4,
       title: 'Alternance: Modernisation et uniformisation des applications internes',
       description:
-        'Migration des différrentes applications internes en utilisant les outils GEODIS. Le but est de remplacer le framework Bootstrap par un librairie GEODIS.',
+        'Migration des différrentes applications internes en utilisant les outils GEODIS. Le but était de remplacer le framework Bootstrap par une librairie GEODIS.',
       imageUrl: 'geodis.png',
       technologies: [
         { logo: 'angular.svg', name: 'Angular' },
@@ -37,7 +37,7 @@ export class ProjetService {
       id: 3,
       title: 'Stage : Modernisation d\'une application ',
       description:
-        'Refonte d\'une application de contenant des informations pour les développeur de GEODIS ASSC. Le but de ce projet est de moderniser l\'application en utilisant Angular et Node.js pour améliorer l\'expérience utilisateur et la performance.',
+        'Refonte d\'une application contenant des informations pour les développeurs de GEODIS ASSC. Le but de ce projet était de moderniser l\'application en utilisant Angular et Node.js pour améliorer l\'expérience utilisateur et la performance.',
       imageUrl: 'geodis.png',
       technologies: [
         { logo: 'angular.svg', name: 'Angular' },
@@ -62,7 +62,7 @@ export class ProjetService {
     {
       id: 2,
       title: 'Game Jam',
-      description: 'Création d’un jeu vidéo en 7 jours. Le thème était "Les nations s\'affrontent passifiquement". Les contraintes étaient d\'utiliser Python et Pygame pour faire un jeu en réseaux. Nous avons décider de faire un jeu de combat sur plateforme.',
+      description: 'Création d’un jeu vidéo en 7 jours en équipe de 7. Le thème était "Les nations s\'affrontent pacifiquement". Les contraintes étaient d\'utiliser Python et Pygame pour faire un jeu en réseaux. Nous avons décidé de faire un jeu de combat sur plateforme.',
       imageUrl: 'gamejam.png',
       technologies: [
         { logo: 'python.png', name: 'Python' },
@@ -87,7 +87,7 @@ export class ProjetService {
       id: 1,
       title: 'Pokédex',
       description:
-        'Le but de ce projet est de se familiariser avec les appels API en JavaScript et une pages web avec les données récupérers. Pour ce projet universitaire en binôme, nous avons choisi de créer un Pokédex en utilisant l’API PokéAPI.',
+        'Le but de ce projet était de se familiariser avec les appels API en JavaScript et une page web avec les données récupérers. Pour ce projet universitaire en binôme, nous avons choisi de créer un Pokédex en utilisant l’API PokéAPI.',
       imageUrl: 'pokedex.png',
       technologies: [
         { logo: 'javascript.svg', name: 'JavaScript' },

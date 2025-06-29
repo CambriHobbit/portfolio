@@ -13,7 +13,7 @@ import { ProjetService } from '../../../providers/projets/projet.service';
 export class HomePageComponent {
   public nom: string = 'Mussio Gabin';
   public description: string =
-    "Je suis étudiant en BUT Informatique à l'IUT2 de Grenoble, passionné par le développement web et les technologies modernes. Je suis à la recherche de défis et d'opportunités pour apprendre et developper mes compétences dans le domaine de l'informatique.";
+    "Je suis étudiant en BUT Informatique à l'IUT2 de Grenoble, passionné par le développement web et les technologies modernes. Je suis à la recherche de défis et d'opportunités pour apprendre et développer mes compétences dans le domaine de l'informatique.";
 
   public linkLinkedIn: string =
     'https://www.linkedin.com/in/gabin-mussio-2b652b369/';
@@ -56,20 +56,20 @@ export class HomePageComponent {
     liste: string[];
   }> = [
     {
-      categorie: 'Compétences organisationnelles',
-      liste: ['Gestion du temps', 'Autonomie', 'Organisation'],
-    },
-    {
-      categorie: 'Compétences interpersonnelles',
-      liste: ["Travail d'équipe", 'Communication'],
-    },
-    {
       categorie: 'Compétences cognitives',
       liste: [
         'Esprit critique',
         'Capacité d’analyse et de synthèse',
         'Résolution de problèmes',
       ],
+    },
+    {
+      categorie: 'Compétences organisationnelles',
+      liste: ['Gestion du temps', 'Autonomie', 'Organisation'],
+    },
+    {
+      categorie: 'Compétences transversales',
+      liste: ["Travail d'équipe", 'Communication'],
     },
   ];
 

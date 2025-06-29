@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import Project from '../../../models/projet.model';
 import { ProjetService } from '../../../providers/projets/projet.service';
@@ -10,7 +10,7 @@ import { NgOptimizedImage } from '@angular/common';
   templateUrl: './details-projet-page.component.html',
   styleUrl: './details-projet-page.component.css',
 })
-export class DetailsProjetPageComponent implements OnInit {
+export class DetailsProjetPageComponent {
   project: Project | undefined;
 
   // Providers
@@ -27,9 +27,5 @@ export class DetailsProjetPageComponent implements OnInit {
 
     this.project = this.projectService.getProjectById(projectId);
 
-  }
-
-  ngOnInit(): void {
-    console.log('Project Details:', this.project);
   }
 }
